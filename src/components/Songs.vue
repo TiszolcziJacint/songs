@@ -11,7 +11,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="song in props.songs">
+        <tr v-for="song in props.songs" v-bind:key="song" v-bind:song="song">
           <td>{{ song.TITLE }}</td>
           <td>{{ song.YEAR }}</td>
           <td>{{ song.BPM  }}</td>

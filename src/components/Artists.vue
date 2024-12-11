@@ -2,7 +2,7 @@
   <div>
     <select class="form-select" @change="getArtist($event)">
       <option disabled  selected>Select an artist</option>
-      <option v-for="artist in props.artists" :value="artist._id">{{artist.artist}}</option>
+      <option v-for="artist in props.artists" v-bind:key="artist" v-bind:artist="artist" :value="artist._id">{{artist.artist}}</option>
     </select>
   </div>
 </template>
